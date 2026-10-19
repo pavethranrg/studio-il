@@ -46,9 +46,9 @@ ul { list-style: none; }
 .copy { display: flex; flex-direction: column; gap: 16px; }
 
 /* ---------- Logo ---------- */
-.logo { display: inline-flex; align-items: flex-end; gap: 8px; font-size: 24px; font-weight: 300; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
-.logo svg { width: 22px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.4; }
-.logo .sun { fill: var(--amber); stroke: none; }
+/* the tile logo with its "Studio Il" lettering beside it (brand/logo-lockup.svg) */
+.logo { display: inline-flex; align-items: center; }
+.logo img { display: block; width: auto; height: 40px; }
 
 /* ---------- Every screen size: logo left, "Menu" right.
    Press it and the options take its place, on one clean sheet of paper;
@@ -61,10 +61,10 @@ ul { list-style: none; }
 /* once the page has scrolled, the bar stays at the top on its own strip of paper */
 .scrolled .bar::before { height: 100%; background: rgba(239, 238, 234, .92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 /* ...and shrinks to a slim line: smaller logo, smaller words, far less padding */
-.bar, .bar .logo, .bar .logo svg, .menu-word, .bar .lang { transition: padding .3s var(--ease), height .3s var(--ease), width .3s var(--ease), font-size .3s var(--ease), color .2s, background .25s, border-color .25s; }
+.bar, .bar .logo, .bar .logo img, .menu-word, .bar .lang { transition: padding .3s var(--ease), height .3s var(--ease), width .3s var(--ease), font-size .3s var(--ease), color .2s, background .25s, border-color .25s; }
 .scrolled .bar { padding-top: 8px; padding-bottom: 8px; }
-.scrolled .bar .logo { height: 30px; font-size: 18px; gap: 6px; }
-.scrolled .bar .logo svg { width: 16px; height: 22px; }
+.scrolled .bar .logo { height: 30px; }
+.scrolled .bar .logo img { height: 26px; }
 .scrolled .menu-word { height: 30px; font-size: 14px; }
 .scrolled .bar .lang { height: 24px; padding: 0 10px; font-size: 11px; }
 .scrolled .drop a { font-size: 16px; }
@@ -277,6 +277,7 @@ a.j-pic:hover img { transform: scale(1.03); }
   .credits { font-size: 11px; }
   .copy, .trio-col { gap: 20px; }
   .bar .logo { height: 64px; }
+  .bar .logo img { height: 46px; }
   .trio { gap: 32px; padding: 144px 80px 80px; }
   .trio-pic > div { max-width: 470px; }
   .shot { margin-bottom: 80px; padding: 40px 80px; }
